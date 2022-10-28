@@ -14,6 +14,8 @@
 
 Analytical and detail oriented Android app developer professional with stellar communication skills. Adept at bringing all team members together to reach a common goal on time and under budget. Conceptualizing app solutions with the latest technology, design theory, and a large dose of creativity. 
 
+Linkedin:<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
 
 ![Profile views](https://gpvc.arturio.dev/shariar99) 
 
