@@ -302,3 +302,30 @@ footer p:nth-child(2){
 	bottom: 35px;
 	font-size: 14px; 
 }
+
+
+
+/*=========================MEDIA QUERIES(MEDIUM DEVICES)==============*/
+
+@media screen and (max-width:1024px) {
+    .hero {
+        height: 40vh;
+        
+    }
+    .content {
+        height: 60vh;
+    }
+}
+
+
+/*=========================SMALL QUERIES(Mobole DEVICES)==============*/
+
+@media screen and (max-width:600px) {
+    .hero {
+        height: 40vh;
+    }
+    .content {
+        height: 60vh;
+        font-size: 24px;
+    }
+}
