@@ -1,11 +1,11 @@
-html {
-  scroll-behavior: smooth;
-}
+
+  
 *{
 	padding: 0;
 	margin: 0;
 	font-family: 'Josefin Sans', sans-serif;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 .hero{
 	height: 100vh;
