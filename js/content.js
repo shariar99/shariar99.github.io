@@ -34,12 +34,12 @@ const portfolioContent = {
         subtitle: "Passionate developer with expertise in mobile application development and a love for creating innovative solutions",
         heading: "Building the Future, One App at a Time",
         paragraphs: [
-            "With 1.5+ years of experience in mobile application development, I specialize in creating high-performance, scalable solutions using Flutter and Android SDK. My journey in tech has been driven by a passion for innovation and a commitment to excellence.",
+            "With 2.3+ years of experience in mobile application development, I specialize in creating high-performance, scalable solutions using Flutter and Android SDK. My journey in tech has been driven by a passion for innovation and a commitment to excellence.",
             "As a published Flutter plugin developer, I've contributed to the community with packages for screen security and QR scanning. My YouTube channel 'CodeProBro' has grown to 4K+ subscribers, where I share knowledge about mobile development.",
             "I believe in clean code architecture, best practices, and creating applications that not only function flawlessly but also provide exceptional user experiences."
         ],
         stats: [
-            { number: "1.5+", label: "Years Experience" },
+            { number: "2.3+", label: "Years Experience" },
             { number: "15+", label: "Projects Completed" },
             { number: "4.1K+", label: "YouTube Subscribers" }
         ]
