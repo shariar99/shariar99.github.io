@@ -172,10 +172,10 @@ const portfolioContent = {
                 technologies: ["Flutter", "OCI8", "PayPal", "Firebase", "Push Notifications", "PL/SQL"],
                 links: [
                     { url: "https://play.google.com/store/apps/details?id=com.adibook.instructor", icon: "fab fa-google-play" },
-                     { url: "https://apps.apple.com/us/app/driving-theory-test-kit-uk/id6744889319", icon: "fab fa-app-store-ios" },
+                     { url: "https://apps.apple.com/us/app/adi-book-instructor/id6743073433", icon: "fab fa-app-store-ios" },
                     { url: "https://play.google.com/store/apps/details?id=com.adibook.student", icon: "fab fa-google-play" },
         
-                    { url: "https://apps.apple.com/us/app/driving-theory-test-kit-uk/id6744889319", icon: "fab fa-app-store-ios" }
+                    { url: "https://apps.apple.com/us/app/adi-book-student/id6743047444", icon: "fab fa-app-store-ios" }
 
 
                 ],
