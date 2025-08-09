@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shariar Hossain - Mobile App Developer</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+          crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" 
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" 
+          integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top glass-nav">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <span class="gradient-text">SH</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+                <span class="sr-only">Toggle navigation</span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto" id="nav-menu">
+                    <!-- Navigation will be populated dynamically -->
+                </ul>
+                <div class="dark-mode-toggle ms-3">
+                    <button id="darkModeToggle" class="btn btn-sm btn-outline-primary rounded-circle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section d-flex align-items-center min-vh-100">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold mb-3" id="hero-title"></h1>
+                        <p class="lead mb-4" id="hero-subtitle"></p>
+                        <p class="mb-4" id="hero-description"></p>
+                        <div class="hero-buttons" id="hero-buttons">
+                            <!-- Buttons will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center" data-aos="fade-left">
+                    <div class="hero-image">
+                        <img src="images/hero/profile.jpg" alt="Shariar Hossain" class="profile-img img-fluid" id="hero-image">
+                        <div class="floating-cards" id="floating-cards">
+                            <!-- Floating cards will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title" id="about-title"></h2>
+                    <p class="section-subtitle" id="about-subtitle"></p>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="about-image">
+                        <img src="images/about/about.jpg" alt="About" class="img-fluid rounded-4" onerror="this.src='images/projects/placeholder.jpg'">
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="about-content">
+                        <h3 class="h4 fw-semibold mb-4" id="about-heading"></h3>
+                        <div id="about-paragraphs">
+                            <!-- About paragraphs will be populated dynamically -->
+                        </div>
+                        <div class="stats-row row mt-5" id="stats-container">
+                            <!-- Stats will be populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title" id="skills-title"></h2>
+                    <p class="section-subtitle" id="skills-subtitle"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="skill-filters text-center" id="skill-filters">
+                        <!-- Skill filters will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="skills-container">
+                <!-- Skills will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title" id="experience-title"></h2>
+                    <p class="section-subtitle" id="experience-subtitle"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="timeline" id="experience-timeline">
+                        <!-- Experience timeline will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title" id="projects-title"></h2>
+                    <p class="section-subtitle" id="projects-subtitle"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="project-filters text-center" id="project-filters">
+                        <!-- Project filters will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+            <div class="row" id="projects-container">
+                <!-- Projects will be populated dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding gradient-bg text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="section-title text-white" id="contact-title"></h2>
+                    <p class="section-subtitle text-white-50" id="contact-subtitle"></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-info" id="contact-info">
+                        <!-- Contact info will be populated dynamically -->
+                    </div>
+                    <div class="social-links mt-4" id="social-links">
+                        <!-- Social links will be populated dynamically -->
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="contact-form glass-card">
+                        <form id="contact-form">
+                            <div class="mb-3">
+                                <label for="name" class="form-label sr-only">Your Name</label>
+                                <input type="text" class="form-control glass-input" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label sr-only">Your Email</label>
+                                <input type="email" class="form-control glass-input" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label sr-only">Subject</label>
+                                <input type="text" class="form-control glass-input" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label sr-only">Your Message</label>
+                                <textarea class="form-control glass-input" id="message" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-light btn-lg w-100">
+                                <i class="fas fa-paper-plane me-2"></i>Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-center text-white">
+        <div class="container">
+            <p class="mb-0" id="footer-text"></p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js" 
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+            crossorigin="anonymous"></script>
+    <!-- AOS Animation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" 
+            integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- Content Script -->
+    <script src="js/content.js"></script>
+    <!-- Animations Script -->
+    <script src="js/animations.js"></script>
+    <!-- Dark Mode Script -->
+    <script src="js/dark-mode.js"></script>
+    <!-- Main Script -->
+    <script src="js/main.js"></script>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Project Preview Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content glass-card">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="projectModalLabel">Project Details</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="project-modal-content">
+                        <!-- Project details will be populated dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
