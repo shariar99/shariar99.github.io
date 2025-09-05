@@ -193,6 +193,32 @@ const portfolioContent = {
                 ],
                 categories: ["plugin", "flutter", "security"]
             },
+
+           {
+                title: "The Lighthouse for Flutter Apps",
+                category: "Flutter Plugin",
+                description: "The Lighthouse for Flutter Apps - A one-line integration performance monitoring plugin that overlays real-time performance metrics on your Flutter app",
+                image: "images/projects/1754387299503.png",
+                technologies: ["Flutter", "Native Android", "Native iOS", "Security", "Plugin Development"],
+                links: [
+                    { url: "https://pub.dev/packages/flutter_perf_lens", icon: "fas fa-globe" },
+                    { url: "https://github.com/shariaralphabyte/flutter_perf_lens", icon: "fab fa-github" }
+                ],
+                categories: ["plugin", "flutter", "performance"]
+            },
+               
+            {
+                title: "Dynamic UI Executor",
+                category: "Flutter Plugin",
+                description: "A powerful Flutter plugin that enables you to build beautiful, interactive user interfaces dynamically at runtime from JSON or String definitions. Perfect for server-driven UI, A/B testing, and rapid prototyping.",
+                image: "images/projects/1754387299503.png",
+                technologies: ["Flutter", "Native Android", "Native iOS", "Security", "Plugin Development"],
+                links: [
+                    { url: "https://pub.dev/packages/dynamic_ui_executor", icon: "fas fa-globe" },
+                    { url: "https://github.com/shariaralphabyte/dynamic_ui_executor", icon: "fab fa-github" }
+                ],
+                categories: ["plugin", "flutter", "performance"]
+            },
             {
                 title: "Ultra QR Scanner ⚡",
                 category: "Flutter Plugin",
