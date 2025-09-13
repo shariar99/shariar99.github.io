@@ -117,7 +117,7 @@ const portfolioContent = {
                     "Develop and maintain high-performance mobile applications",
                     "Design and implement RESTful APIs using OCI8 for Oracle database connectivity",
                     "Apply clean code architecture and state management patterns",
-                    "Integrate payment systems including PayPal subscriptions and payouts"
+                    "Integrate payment systems including PayPal subscriptions and payouts",
                     "Integrate Secure in-app purchases (iOS & Google)  subscriptions"
                 ]
             },
@@ -158,7 +158,7 @@ const portfolioContent = {
                 title: "4 in 1 Driving Theory Test Kit",
                 category: "Cross-Platform Mobile App",
                 description: "A DVSA-approved driving exam preparation app with offline study materials, custom hazard perception video player, unlimited mock tests, and secure in-app purchases (iOS & Google) for flexible premium plans.",
-                image: "images/projects/4 in 1 Driving Theory Test KIT cover.jpg",
+                image: "images/projects/4in1cover.jpg",
                 technologies: ["Flutter", "Hive", "Video Player", "RevenueCat", "Cross-Platform"],
                 links: [
                     { url: "https://play.google.com/store/apps/details?id=com.drivewise.drivingtheorytest", icon: "fab fa-google-play" },

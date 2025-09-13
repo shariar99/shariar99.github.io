@@ -445,7 +445,7 @@ class PortfolioManager {
                 const div = document.createElement('div');
                 div.className = 'col-lg-4 col-md-6';
                 div.setAttribute('data-aos', 'fade-up');
-                div.setAttribute('data-categories', project.categories.join(' '));
+                div.setAttribute('data-categories', project.categories.join(','));
                 div.innerHTML = `
                     <div class="project-card" data-project-index="${projectIndex}">
                         <div class="project-image">
@@ -588,7 +588,7 @@ class PortfolioManager {
             if (filter === 'all') {
                 card.style.display = 'block';
             } else {
-                const categories = card.getAttribute('data-categories').split(' ');
+                const categories = card.getAttribute('data-categories').split(',');
                 if (categories.includes(filter)) {
                     card.style.display = 'block';
                 } else {
@@ -610,6 +610,15 @@ class PortfolioManager {
             contact.info.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'contact-item';
+                div.style.cursor = 'pointer';
+                div.addEventListener('click', () => {
+                    if (item.title === 'Email') {
+                        window.location.href = `mailto:${item.details}`;
+                    } else if (item.title === 'CV download' || item.title === 'Portfolio') {
+                        window.open(item.details, '_blank');
+                    }
+                });
+
                 div.innerHTML = `
                     <div class="contact-icon">
                         <i class="${item.icon}"></i>
@@ -946,30 +955,30 @@ class PortfolioManager {
 
     handleContactForm(e) {
         e.preventDefault();
-        
+
         const form = e.target;
         const submitBtn = form.querySelector('button[type="submit"]');
         if (!submitBtn) return;
-        
+
         const originalText = submitBtn.innerHTML;
-        
+
         // Show loading state
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
         submitBtn.disabled = true;
-        
+
         // Get form data
         const formData = new FormData(form);
         const name = formData.get('name');
         const email = formData.get('email');
         const subject = formData.get('subject');
         const message = formData.get('message');
-        
+
         // Validate form data
         if (!name || !email || !subject || !message) {
             // Show error state
             submitBtn.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i>Please fill all fields';
             submitBtn.className = 'btn btn-danger btn-lg w-100';
-            
+
             // Reset button after delay
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
@@ -978,14 +987,14 @@ class PortfolioManager {
             }, 2000);
             return;
         }
-        
+
         // Additional email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             // Show error state
             submitBtn.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i>Please enter a valid email';
             submitBtn.className = 'btn btn-danger btn-lg w-100';
-            
+
             // Reset button after delay
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
@@ -994,32 +1003,83 @@ class PortfolioManager {
             }, 2000);
             return;
         }
-        
-        // Simulate form submission (replace with actual form handling)
-        setTimeout(() => {
+
+        // Send email using EmailJS
+        // Note: You need to set up EmailJS service at https://www.emailjs.com/
+        // Replace the service ID, template ID, and public key with your own
+        const serviceID = 'your_service_id'; // Replace with your EmailJS service ID
+        const templateID = 'your_template_id'; // Replace with your EmailJS template ID
+        const publicKey = 'your_public_key'; // Replace with your EmailJS public key
+
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            to_email: 'contact.shariar.cse@gmail.com',
+            subject: subject,
+            message: message,
+            reply_to: email
+        };
+
+        // Check if EmailJS is loaded
+        if (typeof emailjs !== 'undefined') {
+            emailjs.init(publicKey);
+
+            emailjs.send(serviceID, templateID, templateParams)
+                .then((response) => {
+                    console.log('Email sent successfully:', response);
+                    // Show success state
+                    submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!';
+                    submitBtn.className = 'btn btn-success btn-lg w-100';
+
+                    // Add aria-live for screen readers
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'sr-only';
+                    successMessage.setAttribute('aria-live', 'polite');
+                    successMessage.textContent = 'Your message has been sent successfully.';
+                    form.appendChild(successMessage);
+
+                    // Reset form after delay
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.className = 'btn btn-light btn-lg w-100';
+                        submitBtn.disabled = false;
+                        form.reset();
+                        // Remove success message for screen readers
+                        if (successMessage.parentNode) {
+                            successMessage.parentNode.removeChild(successMessage);
+                        }
+                    }, 2000);
+                })
+                .catch((error) => {
+                    console.error('Email sending failed:', error);
+                    // Show error state
+                    submitBtn.innerHTML = '<i class="fas fa-exclamation-circle me-2"></i>Failed to send message';
+                    submitBtn.className = 'btn btn-danger btn-lg w-100';
+
+                    // Reset button after delay
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.className = 'btn btn-light btn-lg w-100';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                });
+        } else {
+            // Fallback: Open mail client
+            const mailtoLink = `mailto:contact.shariar.cse@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
+            window.location.href = mailtoLink;
+
             // Show success state
-            submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Message Sent!';
+            submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Opening email client...';
             submitBtn.className = 'btn btn-success btn-lg w-100';
-            
-            // Add aria-live for screen readers
-            const successMessage = document.createElement('div');
-            successMessage.className = 'sr-only';
-            successMessage.setAttribute('aria-live', 'polite');
-            successMessage.textContent = 'Your message has been sent successfully.';
-            form.appendChild(successMessage);
-            
+
             // Reset form after delay
             setTimeout(() => {
                 submitBtn.innerHTML = originalText;
                 submitBtn.className = 'btn btn-light btn-lg w-100';
                 submitBtn.disabled = false;
                 form.reset();
-                // Remove success message for screen readers
-                if (successMessage.parentNode) {
-                    successMessage.parentNode.removeChild(successMessage);
-                }
             }, 2000);
-        }, 1500);
+        }
     }
 
     // Utility method to animate progress bars

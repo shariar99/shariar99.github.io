@@ -269,6 +269,21 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
+/* Contact section specific styling */
+#contact .section-title {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dark-mode #contact .section-title {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .section-subtitle {
     font-size: 1.125rem;
     color: var(--gray);
