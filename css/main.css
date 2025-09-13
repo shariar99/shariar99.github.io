@@ -284,6 +284,19 @@ html {
     -webkit-text-fill-color: transparent;
 }
 
+/* Light mode contact section text */
+:not(.dark-mode) #contact .section-title {
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: white;
+    color: white;
+}
+
+:not(.dark-mode) #contact .section-subtitle {
+    color: white;
+}
+
 .section-subtitle {
     font-size: 1.125rem;
     color: var(--gray);
