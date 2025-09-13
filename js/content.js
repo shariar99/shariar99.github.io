@@ -117,7 +117,7 @@ const portfolioContent = {
                     "Develop and maintain high-performance mobile applications",
                     "Design and implement RESTful APIs using OCI8 for Oracle database connectivity",
                     "Apply clean code architecture and state management patterns",
-                    "Integrate payment systems including PayPal subscriptions and payouts"
+                    "Integrate payment systems including PayPal subscriptions and payouts",
                     "Integrate Secure in-app purchases (iOS & Google)  subscriptions"
                 ]
             },
