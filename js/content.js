@@ -118,6 +118,7 @@ const portfolioContent = {
                     "Design and implement RESTful APIs using OCI8 for Oracle database connectivity",
                     "Apply clean code architecture and state management patterns",
                     "Integrate payment systems including PayPal subscriptions and payouts"
+                    "Integrate Secure in-app purchases (iOS & Google)  subscriptions"
                 ]
             },
             {
@@ -152,6 +153,19 @@ const portfolioContent = {
         title: "Featured Projects",
         subtitle: "Showcasing my best work in mobile application development and plugin creation",
         list: [
+
+            {
+                title: "4 in 1 Driving Theory Test Kit",
+                category: "Cross-Platform Mobile App",
+                description: "A DVSA-approved driving exam preparation app with offline study materials, custom hazard perception video player, unlimited mock tests, and secure in-app purchases (iOS & Google) for flexible premium plans.",
+                image: "images/projects/4 in 1 Driving Theory Test KIT cover.jpg",
+                technologies: ["Flutter", "Hive", "Video Player", "RevenueCat", "Cross-Platform"],
+                links: [
+                    { url: "https://play.google.com/store/apps/details?id=com.drivewise.drivingtheorytest", icon: "fab fa-google-play" },
+                    { url: "https://apps.apple.com/us/app/4-in-1-driving-theory-test-kit/id6751163024", icon: "fab fa-app-store-ios" }
+                ],
+                categories: ["mobile", "flutter", "in-app purchases"]
+            },
             {
                 title: "UK Driving Theory Exam App",
                 category: "Cross-Platform Mobile App",
