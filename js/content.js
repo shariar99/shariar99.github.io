@@ -15,7 +15,7 @@ const portfolioContent = {
     hero: {
         title: "Shariar Hossain",
         subtitle: "Assistant Software Engineer & Mobile App Developer",
-        description: "Passionate mobile app developer specializing in Flutter, Android SDK, and creating innovative solutions. Published plugin developer with 4K+ YouTube subscribers teaching mobile development.",
+        description: "Passionate mobile app developer specializing in Flutter, Android SDK, and creating innovative solutions. Published plugin developer with 5K+ YouTube subscribers teaching mobile development.",
         customImage: "images/hero/profile.jpg", // Can be changed to any custom PNG image
         buttons: [
             { text: "View My Work", href: "#projects", class: "btn-hero-primary", icon: "fas fa-rocket" },
@@ -23,7 +23,7 @@ const portfolioContent = {
         ],
         floatingCards: [
             { text: "Flutter", icon: "fab fa-flutter" },
-            { text: "4K+ Subs", icon: "fab fa-youtube" },
+            { text: "5K+ Subs", icon: "fab fa-youtube" },
             { text: "Android", icon: "fab fa-android" }
         ]
     },
@@ -34,14 +34,14 @@ const portfolioContent = {
         subtitle: "Passionate developer with expertise in mobile application development and a love for creating innovative solutions",
         heading: "Building the Future, One App at a Time",
         paragraphs: [
-            "With 2.3+ years of experience in mobile application development, I specialize in creating high-performance, scalable solutions using Flutter and Android SDK. My journey in tech has been driven by a passion for innovation and a commitment to excellence.",
+            "With 3+ years of experience in mobile application development, I specialize in creating high-performance, scalable solutions using Flutter and Android SDK. My journey in tech has been driven by a passion for innovation and a commitment to excellence.",
             "As a published Flutter plugin developer, I've contributed to the community with packages for screen security and QR scanning. My YouTube channel 'CodeProBro' has grown to 4K+ subscribers, where I share knowledge about mobile development.",
             "I believe in clean code architecture, best practices, and creating applications that not only function flawlessly but also provide exceptional user experiences."
         ],
         stats: [
-            { number: "2.3+", label: "Years Experience" },
+            { number: "3+", label: "Years Experience" },
             { number: "15+", label: "Projects Completed" },
-            { number: "4.1K+", label: "YouTube Subscribers" }
+            { number: "5K+", label: "YouTube Subscribers" }
         ]
     },
 
@@ -54,13 +54,12 @@ const portfolioContent = {
                 title: "Programming Languages",
                 icon: "fas fa-code",
                 technologies: [
-                    { name: "Dart", level: 95 },
+                    { name: "Dart", level: 99 },
                     { name: "Java", level: 90 },
                     { name: "Kotlin", level: 85 },
                     { name: "Go", level: 70 },
                     { name: "Swift", level: 75 },
-                    { name: "HTML", level: 90 },
-                    { name: "CSS", level: 85 },
+                    { name: "Rust", level: 60 },
                 ]
             },
             {
@@ -127,7 +126,7 @@ const portfolioContent = {
                 company: "CodeProBro YouTube Channel",
                 description: "Creating educational content and contributing to the Flutter ecosystem through plugin development.",
                 highlights: [
-                    "Published 2 Flutter plugins on pub.dev with thousands of downloads",
+                    "Published 4 Flutter plugins on pub.dev with thousands of downloads",
                     "Built a YouTube community of 4K+ subscribers",
                     "Create comprehensive tutorials on mobile development",
                     "Contribute to open-source Flutter ecosystem"
@@ -186,9 +185,9 @@ const portfolioContent = {
                 technologies: ["Flutter", "OCI8", "PayPal", "Firebase", "Push Notifications", "PL/SQL"],
                 links: [
                     { url: "https://play.google.com/store/apps/details?id=com.adibook.instructor", icon: "fab fa-google-play" },
-                     { url: "https://apps.apple.com/us/app/adi-book-instructor/id6743073433", icon: "fab fa-app-store-ios" },
+                    { url: "https://apps.apple.com/us/app/adi-book-instructor/id6743073433", icon: "fab fa-app-store-ios" },
                     { url: "https://play.google.com/store/apps/details?id=com.adibook.student", icon: "fab fa-google-play" },
-        
+
                     { url: "https://apps.apple.com/us/app/adi-book-student/id6743047444", icon: "fab fa-app-store-ios" }
 
 
@@ -208,7 +207,7 @@ const portfolioContent = {
                 categories: ["plugin", "flutter", "security"]
             },
 
-           {
+            {
                 title: "The Lighthouse for Flutter Apps",
                 category: "Flutter Plugin",
                 description: "The Lighthouse for Flutter Apps - A one-line integration performance monitoring plugin that overlays real-time performance metrics on your Flutter app",
@@ -220,7 +219,7 @@ const portfolioContent = {
                 ],
                 categories: ["plugin", "flutter", "performance"]
             },
-               
+
             {
                 title: "Dynamic UI Executor",
                 category: "Flutter Plugin",
@@ -283,7 +282,7 @@ const portfolioContent = {
                 details: "shariarhossin99@gmail.com"
             },
             {
-                icon: "fas fa-file-alt", 
+                icon: "fas fa-file-alt",
                 title: "CV download",
                 details: "https://shariar99.github.io/cv/"
             },
