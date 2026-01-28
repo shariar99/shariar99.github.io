@@ -14,7 +14,7 @@ const portfolioContent = {
     // Hero Section
     hero: {
         title: "Shariar Hossain",
-        subtitle: "Assistant Software Engineer & Mobile App Developer",
+        subtitle: "Software Engineer & Mobile App Developer",
         description: "Passionate mobile app developer specializing in Flutter, Android SDK, and creating innovative solutions. Published plugin developer with 5K+ YouTube subscribers teaching mobile development.",
         customImage: "images/hero/profile.jpg", // Can be changed to any custom PNG image
         buttons: [
@@ -107,8 +107,21 @@ const portfolioContent = {
         title: "Professional Experience",
         subtitle: "My journey through various roles and responsibilities in the tech industry",
         timeline: [
+                 {
+                date: "january 2026 – Present",
+                title: "Software Engineer",
+                company: "Alphabyte Technology Ltd.",
+                description: "Leading mobile application development projects with focus on Flutter and Android SDK technologies.",
+                highlights: [
+                    "Build and maintain high-performance Flutter applications",
+                    "Implement RESTful APIs with OCI8 integration",
+                     "Follow clean architecture and state management best practices",
+                     "Integrate secure payment and subscription systems (PayPal, iOS, Google)"
+
+                ]
+            },
             {
-                date: "March 2024 – Present",
+                date: "March 2024 – December 2025 ",
                 title: "Assistant Software Engineer",
                 company: "Alphabyte Technology Ltd.",
                 description: "Leading mobile application development projects with focus on Flutter and Android SDK technologies.",
@@ -308,6 +321,6 @@ const portfolioContent = {
 
     // Footer
     footer: {
-        text: "© 2025 Shariar Hossain. All rights reserved. Built with passion and dedication."
+        text: "© 2025 CodePro Bro. All rights reserved. Built with passion and dedication."
     }
 };
