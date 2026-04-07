@@ -165,7 +165,18 @@ const portfolioContent = {
         title: "Featured Projects",
         subtitle: "Showcasing my best work in mobile application development and plugin creation",
         list: [
-
+            {
+                title: "Plan 4 Care - Care Home",
+                category: "Cross-Platform Mobile App",
+                description: "Offline-first app using SQFlite with automatic online/offline data synchronization. Built with Clean Architecture for scalable, maintainable code. Efficient state management using Riverpod. GPS & time zone-based smart check-in system for accurate attendance. Integrated payroll and workforce management system.",
+                image: "images/projects/r_care.webp",
+                technologies: ["Flutter", "Riverpod", "SQFlite", "Clean Architecture", "GPS"],
+                links: [
+                    { url: "https://play.google.com/store/apps/details?id=com.plan4care.residentialcare", icon: "fab fa-google-play" },
+                    { url: "https://apps.apple.com/us/app/plan-4-care-care-home/id6758883747", icon: "fab fa-app-store-ios" }
+                ],
+                categories: ["mobile", "flutter", "management"]
+            },
             {
                 title: "4 in 1 Driving Theory Test Kit",
                 category: "Cross-Platform Mobile App",
